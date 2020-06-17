@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>A Tiny Design</title>
+
+        <style>
+            body{
+                margin: 0;
+                font-family: sans-serif;
+            }
+
+            header{
+                color: white;
+                margin: 10px 10% 0 10%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            header #right{
+                margin: 0 80px 0 80px;
+            }
+
+            header button{
+                width: 90px;
+                height: 25px;
+                border-radius: 10px;
+                color: white;
+                background-color: transparent;
+                border: 1px solid white;
+            }
+
+            /* MAIN PAGE */
+
+            main{
+                background-color: rgb(6, 6, 219);
+                height: 100vh;
+                overflow: hidden
+            }
+
+            #left_text{
+                margin-left: 10%;
+                margin-top: 60px;
+                color: white;
+            }
+
+            #left_text p {
+                font-size: 13px;
+                margin-bottom: -5px;
+            }
+
+            #left_text h1{
+                font-size: 45px;
+            }
+
+            #left_text button{
+                margin-top: 30px;
+                width: 190px;
+                height: 35px;
+                border-radius: 15px;
+                border: none;
+                outline: none;
+                padding: 0;
+
+            }
+
+
+            /* PHONE DESIGN */
+
+            #phone{
+                position: absolute;
+                top: 0;
+                margin-top: 70px;
+                margin-left: 70%;
+                width: 16.5%;
+                height: 65vh;
+                border-radius: 27px;
+                background-color: rgb(11, 11, 241);
+                box-shadow: -10px 15px 10px rgb(2, 2, 161);
+                z-index: 10;
+                padding: 4px;
+                box-sizing: border-box;
+            }
+
+            #inner-phone{
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                border-radius: 27px;
+            }
+
+            #top-bezel{
+                width: 60%;
+                height: 6%;
+                position: absolute;
+                top: 0;
+                left: 40px;
+                border-radius: 0 0 10px 10px;
+                background-color: rgb(6, 6, 219);
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            #button1{
+                width: 5px;
+                height: 5%;
+                border-radius: 2px 0  0 2px;
+                background-color: rgb(6, 6, 219);
+                position: absolute;
+                top: 80px;
+                left: -4.5px;
+            }
+
+            #button2{
+                width: 5px;
+                height: 5%;
+                border-radius: 2px 0  0 2px;
+                background-color: rgb(6, 6, 219);
+                position: absolute;
+                top: 110px;
+                left: -4.5px;
+            }
+
+            #box{
+                width: 45px;
+                height: 45px;
+                border-radius: 4px;
+                background-color: rgb(6, 6, 219);
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                z-index: 20;
+            }
+
+            #logo{
+                width: 40%;
+                height: 20px;
+                position: absolute;
+                border-radius: 7px 7px 0 0;
+                top: 35%;
+                left: 30%;
+                background-color: white;
+            }
+
+            #rs{
+                width: 32%;
+                height: 20px;
+                position: absolute;
+                border-radius: 5px 5px 0 0;
+                top: 39.5%;
+                left: 35%;
+                background-color: rgb(6, 6, 219);
+                z-index: 50;
+            }
+
+            #box-skew{
+                width: 45px;
+                height: 45px;
+                border-radius: 4px;
+                background-color: lightblue;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%)  rotateZ(45deg);
+                left: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <span id="left">NairaPacket</span>
+                <div>
+                <span>Home</span>
+                <span id="right">FAQ's</span>
+                <button>Download</button>
+                </div>
+            </header>
+
+            <div id="left_text">
+                <h1>The Healthier Way <br> To Transact.</h1>
+
+                <p>NairaPacket adopts the escrow method to rid small- <br>
+                scale business of their lorem ipsum frustrations.</p>
+
+                <p>0.2% percent charge per Mechanic transaction.</p>
+
+                <p>Free intra-platform transfers. Barcode facility is 
+                    available in the <br>abscence of a POS machine.
+                </p>
+
+                <p>Patented secure escrow system called LoremPacket.</p>
+
+                <div>
+                    <button>Get the app on playstore</button>
+                </div>
+                
+            </div>
+
+            <div id="phone">
+                <div id="inner-phone"></div>
+                <div id="top-bezel"></div>
+                <div id="button1"></div>
+                <div id="button2"></div>
+                <div id="box">
+                    <div id="logo"></div>
+                    <div id="rs"></div>
+                </div>
+                <div id="box-skew"></div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" style="display:block;
+             transform:scale(-1, 1); bottom: -22px; position: relative;
+             ;" viewBox="0 0 1440 320" id="svg">
+                <path fill="white" fill-opacity="1"
+                d="M0,128L60,149.3C120,171,240,213,360,229.3C480,245,600,235,720,218.7C840,203,960,181,1080,144C1200,107,1320,53,1380,26.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"/>
+            </svg>
+
+        </main>        
+    </body>
+</html>
