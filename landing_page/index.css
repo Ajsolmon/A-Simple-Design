@@ -1,0 +1,252 @@
+body{
+    margin: 0;
+}
+
+header{
+    color: white;
+    margin: 10px 10% 0 10%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-family: 'Palanquin Dark', sans-serif;
+
+}
+
+header #right{
+    margin: 0 80px 0 80px;
+}
+
+header button{
+    width: 90px;
+    border-radius: 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* MAIN PAGE */
+
+main{
+    background-color: rgb(6, 6, 219);
+    height: 100vh;
+    overflow: hidden
+}
+
+#left_text{
+    margin-left: 10%;
+    margin-top: 60px;
+    font-family: 'Merienda One', cursive;
+    color: white;
+}
+
+button{
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+#left_text p {
+    font-size: 17px;
+    margin-bottom: -5px;
+}
+
+#left_text h1{
+    font-size: 45px;
+}
+
+#left_text button{
+    background-color: rgb(6, 6, 219);
+    color: white;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2),
+    -4px -4px 9px rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+    width: 190px;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+#left_text button:hover{
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25) inset,
+    -4px -4px 4px rgba(255, 255, 255, 0.3) inset;
+}
+
+
+/* PHONE DESIGN */
+
+#phone{
+    position: absolute;
+    top: 0;
+    margin-top: 70px;
+    margin-left: 70%;
+    width: 200px;
+    height: 400px;
+    border-radius: 27px;
+    background-color: rgb(11, 11, 241);
+    box-shadow: -10px 15px 10px rgba(2, 2, 161, 0.5),
+    10px -10px 10px rgba(2, 2, 161, 0.1)
+    ;
+    z-index: 10;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+#inner-phone{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 23px;
+}
+
+#top-bezel{
+    width: 60%;
+    height: 6%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 10px 10px;
+    background-color: rgb(6, 6, 219);
+}
+
+#button1{
+    width: 5px;
+    height: 5%;
+    border-radius: 2px 0  0 2px;
+    background-color: rgb(6, 6, 219);
+    position: absolute;
+    top: 80px;
+    left: -4.5px;
+}
+
+#button2{
+    width: 5px;
+    height: 5%;
+    border-radius: 2px 0  0 2px;
+    background-color: rgb(6, 6, 219);
+    position: absolute;
+    top: 110px;
+    left: -4.5px;
+}
+
+#box{
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    background-color: rgb(6, 6, 219);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    z-index: 20;
+}
+
+#logo{
+    width: 40%;
+    height: 20px;
+    position: absolute;
+    border-radius: 7px 7px 0 0;
+    top: 35%;
+    left: 30%;
+    background-color: white;
+}
+
+#rs{
+    width: 32%;
+    height: 20px;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    top: 39.5%;
+    left: 35%;
+    background-color: rgb(6, 6, 219);
+    z-index: 50;
+}
+
+#box-skew{
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    background-color: lightblue;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)  rotateZ(45deg);
+    left: 50%;
+}
+
+#popUp{
+    display: none;
+}
+
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+    
+header{
+    font-size: 27px;
+    text-align: center;
+}
+
+#left{
+    text-align: center;
+}
+
+#sideHeader{
+    display: none;
+}
+
+/* MAIN PAGE */
+
+main{
+    height: auto;
+}
+
+#left_text{
+    margin-left: 10px;
+}
+
+#left_text p {
+    font-size: 14px;
+}
+
+#left_text h1{
+    font-size: 35px;
+}
+
+svg{
+    display: none;
+}
+
+#phone{
+    display: none;
+}
+
+#popUp{
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 15;
+    background: linear-gradient(to right, lightblue, turquoise);
+    font-family: 'Merienda One', cursive;
+    font-size: 15px;
+    color: blue;
+    animation: pops 5s 5;
+}
+
+@keyframes pops {
+    0%{ 
+        color: transparent;
+        background: transparent;
+    }
+    50%{ 
+        color: blue;
+        background: linear-gradient(to right, lightblue, turquoise);
+    
+    }
+    100%{
+        color: transparent;
+        background: transparent;
+    }
+}
+}
